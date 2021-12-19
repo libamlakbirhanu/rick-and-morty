@@ -16,12 +16,16 @@ export default function Card({ character, episodes, episodeCount }) {
 	const handleClose = () => {
 		setOpen(false);
 	};
+	const myLoader = ({ src, width, quality }) => {
+		return `${src}`;
+	};
 
 	return (
 		<div style={{ marginBottom: '10px', width: '31%' }}>
 			<CardContainer>
 				<div className="image">
 					<Image
+						loader={myLoader}
 						layout="fill"
 						src={character.image}
 						alt="character image"

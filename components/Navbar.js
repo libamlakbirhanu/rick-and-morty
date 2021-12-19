@@ -5,10 +5,15 @@ import { useAppContext } from '../context/state';
 import { darkTheme, lightTheme } from '../theme';
 
 export default function Navbar() {
+	const myLoader = ({ src, width, quality }) => {
+		return `${src}`;
+	};
+
 	return (
 		<Nav>
 			<NavWrapper>
 				<Image
+					loader={myLoader}
 					width="200%"
 					height={50}
 					src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Rick_and_Morty.svg/320px-Rick_and_Morty.svg.png"

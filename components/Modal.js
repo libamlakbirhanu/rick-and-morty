@@ -13,6 +13,10 @@ export default function Modal({
 	episodeCount,
 	handleClose,
 }) {
+	const myLoader = ({ src, width, quality }) => {
+		return `${src}`;
+	};
+
 	return (
 		<div className="modalContailer">
 			<ModalContainer>
@@ -21,6 +25,7 @@ export default function Modal({
 						<InnerDiv>
 							<div className="image">
 								<Image
+									loader={myLoader}
 									layout="fill"
 									src={character.image}
 									alt="character image"
